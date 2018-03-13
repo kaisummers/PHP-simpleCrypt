@@ -9,8 +9,7 @@ class simpleCrypt
     public static function encrypt($msg, $key)
     {
         $nce = openssl_random_pseudo_bytes(openssl_cipher_iv_length(self::ENC));
-        $enc = openssl_encrypt($msg, self::ENC, $key, OPENSSL_RAW_DATA, $nce);
-        return base64_encode($nce.$enc);
+        return base64_encode($nce.openssl_encrypt($msg, self::ENC, $key, OPENSSL_RAW_DATA, $nce));
     }
     // Decrypt
     public static function decrypt($msg, $key)
