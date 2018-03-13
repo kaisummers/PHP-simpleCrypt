@@ -17,7 +17,6 @@ class simpleCrypt
     {
         $msg = $msg === false ? die('Encryption failure') : base64_decode($msg, true);
         $nze = openssl_cipher_iv_length(self::ENC);
-        $nce = mb_substr($msg, 0, $nze, '8bit');
-        return openssl_decrypt(mb_substr($msg, $nze, null, '8bit'), self::ENC, $key, OPENSSL_RAW_DATA, $nce);
+        return openssl_decrypt(mb_substr($msg, $nze, null, '8bit'), self::ENC, $key, OPENSSL_RAW_DATA, mb_substr($msg, 0, $nze, '8bit'));
     }
 }
