@@ -19,8 +19,5 @@ PHP simpleCrypt is an easy to use PHP class that provides two-way encryption wit
   $dec = simpleCrypt::decrypt($enc, $key);
 
   // Example Output
-  echo "$enc<br>$dec";
-
-# Example Output
-0UpxPUAVH1c6FKa9JwcZBJciQZ2qjIUCzthTv9sthdm8HFou12eCB43pVNu1R/28pC3IscuHroBNRiP/
-The quick brown fox jumps over the lazy dog.
+  echo "<h1>PHP simpleCrypt - Example Output</h1>Encrypted String: $enc<br>Decrypted String: $dec";
+?>
