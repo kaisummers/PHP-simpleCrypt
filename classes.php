@@ -1,6 +1,6 @@
 <?php
 /*
- * PHP simpleCrypt
+ * PHP-simpleCrypt
  */
 class simpleCrypt
 {
