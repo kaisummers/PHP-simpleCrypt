@@ -33,4 +33,4 @@ $dec = $crypt->decrypt($enc, $key);
 echo $enc." decrypted is ".$dec;
 
 # Example Output
-wJFdwUlZ9qJLGQDhHrA0RVxpiAG/dwPpbk8jbQ== decrypted is Hello world.
+Ylb7PnDPP68Z7Q4LXV8XSHC6AMb5a3lvtF2aRw== decrypted is Hello world.
