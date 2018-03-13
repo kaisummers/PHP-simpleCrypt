@@ -1,7 +1,7 @@
 # PHP simpleCrypt
-Simple PHP Encryption &amp; Decryption using OpenSSL.
+Simple PHP Encryption &amp; Decryption using OpenSSL & AES-256-CTR.
 
-PHP simpleCrypt is an easy to use PHP class that provides two-way encryption with a key.
+PHP simpleCrypt is an easy to use PHP class that provides two-way encryption with a key. After encrypting using OpenSSL and AES256, it will output a string in base64.
 
 # Example Usage
 // Include class file containing PHP simpleCrypt
