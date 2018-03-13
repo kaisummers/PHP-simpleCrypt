@@ -6,16 +6,16 @@ class simpleCrypt
 {
     const ENC = 'aes-256-ctr';
     // Encrypt
-    public static function encrypt($msg, $key)
+    public static function encrypt($d, $k)
     {
-        $nce = openssl_random_pseudo_bytes(openssl_cipher_iv_length(self::ENC));
-        return base64_encode($nce.openssl_encrypt($msg, self::ENC, $key, OPENSSL_RAW_DATA, $nce));
+        $n = openssl_random_pseudo_bytes(openssl_cipher_iv_length(self::ENC));
+        return base64_encode($n.openssl_encrypt($d, self::ENC, $k, OPENSSL_RAW_DATA, $n));
     }
     // Decrypt
-    public static function decrypt($msg, $key)
+    public static function decrypt($d, $k)
     {
-        $msg = $msg === false ? die('Encryption failure') : base64_decode($msg, true);
-        $nze = openssl_cipher_iv_length(self::ENC);
-        return openssl_decrypt(mb_substr($msg, $nze, null, '8bit'), self::ENC, $key, OPENSSL_RAW_DATA, mb_substr($msg, 0, $nze, '8bit'));
+        $d = $d === false ? die('Encryption failure') : base64_decode($d, true);
+        $n = openssl_cipher_iv_length(self::ENC);
+        return openssl_decrypt(mb_substr($d, $n, null, '8bit'), self::ENC, $k, OPENSSL_RAW_DATA, mb_substr($d, 0, $n, '8bit'));
     }
 }
