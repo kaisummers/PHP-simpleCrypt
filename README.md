@@ -11,7 +11,7 @@ include("classes.php");
 
 // Encryption key
 
-$key = hex2bin("551dcc56cef122e6159d50e3a9c3ae577cfbf1392efeec33acae3cf32898fa34");
+$key = hex2bin("706c656173652063686f6f73652061626f75742074656e2072616e646f6d207365656420776f72647320656e636f64656420696e20686578");
 
 
 // Encryption
@@ -33,4 +33,4 @@ $dec = $crypt->decrypt($enc, $key);
 echo $enc." decrypted is ".$dec;
 
 # Example Output
-Ylb7PnDPP68Z7Q4LXV8XSHC6AMb5a3lvtF2aRw== decrypted is Hello world.
+csRagS9zHUXOrwKVXVkbKF6bZArE2pnXRMrc+g== decrypted is Hello world.
